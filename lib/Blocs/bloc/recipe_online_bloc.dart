@@ -12,6 +12,7 @@ class RecipeOnlineBloc extends Bloc<RecipeOnlineEvent, RecipeOnlineState> {
     on<RecipeOnlineEvent>((event, emit) async {
       if (event == RecipeOnlineEvent.fetEntries) {
         try {
+          print('ssssssssssssssssssssssssss');
           final onlineRecipes = await repository.getRecipe();
           emit(RecipeOnlineState(onlineRecipes: onlineRecipes));
         } catch (_) {}
