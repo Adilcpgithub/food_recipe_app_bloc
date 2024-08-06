@@ -35,7 +35,7 @@ class RecipeOnlineRepository {
       recipes.add(
         Recipe(
           image: imageUrl,
-          name: details['displayName'] ?? '',
+          name: details['name'] ?? '',
           rating: details['rating']?.toString() ?? '',
           cookingTime: details['totalTime'] ?? '',
         ),

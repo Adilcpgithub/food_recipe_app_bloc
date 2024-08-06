@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:food_recipe_app_bloc/Blocs/bloc/recipe_online_bloc.dart';
-import 'package:food_recipe_app_bloc/Pages/home_Page.dart';
+import 'package:food_recipe_app_bloc/Pages/bottom_navbar.dart';
 import 'package:food_recipe_app_bloc/Repository/recipe_online_repository.dart';
 
 void main() {
@@ -26,9 +26,9 @@ class MyApp extends StatelessWidget {
                     RepositoryProvider.of<RecipeOnlineRepository>(context)),
               )
             ],
-            child: MaterialApp(
+            child: const MaterialApp(
               debugShowCheckedModeBanner: false,
-              home: HomePage(),
+              home: BottomNavBar(),
             )));
   }
 }

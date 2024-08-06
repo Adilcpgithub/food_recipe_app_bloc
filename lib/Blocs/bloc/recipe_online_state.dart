@@ -1,9 +1,12 @@
 part of 'recipe_online_bloc.dart';
 
-class RecipeOnlineState extends Equatable {
-  final List<Recipe> onlineRecipes;
-  RecipeOnlineState({required this.onlineRecipes});
+abstract class RecipeOnlineState {}
 
-  @override
-  List<Object> get props => [];
+class RecipeOnlineInitial extends RecipeOnlineState {}
+
+class RecipeOnlineLoading extends RecipeOnlineState {}
+
+class RecipeOnlineLoaded extends RecipeOnlineState {
+  final List<Recipe> onlineRecipes;
+  RecipeOnlineLoaded({required this.onlineRecipes});
 }
