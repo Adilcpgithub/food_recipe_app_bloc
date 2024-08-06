@@ -49,7 +49,7 @@ class _AddRecipesState extends State<AddRecipes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color.fromARGB(232, 255, 216, 149),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(232, 255, 163, 5),
         title: Center(
@@ -62,7 +62,7 @@ class _AddRecipesState extends State<AddRecipes> {
         )),
       ),
       body: Container(
-        color: Colors.grey[200], // Background color for the whole body
+        color: Color.fromARGB(232, 255, 216, 149),
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(16.0),

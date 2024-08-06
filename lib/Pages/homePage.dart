@@ -67,6 +67,7 @@ class RecipeListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(232, 255, 216, 149),
       appBar: AppBar(
           backgroundColor: Color.fromARGB(232, 255, 163, 5),
           title: Center(

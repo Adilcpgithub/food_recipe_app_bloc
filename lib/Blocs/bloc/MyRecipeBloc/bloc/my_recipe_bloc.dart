@@ -23,6 +23,7 @@ class MyRecipeBloc extends Bloc<MyRecipeEvent, MyRecipeState> {
           break;
         case MyRecipeEvent.isloading:
           emit(MyRecipeLoading());
+        case MyRecipeEvent.deleted:
       }
     });
   }

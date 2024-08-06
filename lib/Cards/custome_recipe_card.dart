@@ -15,7 +15,7 @@ class RecipeCardCustom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color.fromARGB(255, 248, 232, 181),
+      color: Color.fromARGB(255, 249, 236, 210),
       margin: EdgeInsets.all(8.0),
       elevation: 5.0,
       shape: RoundedRectangleBorder(
