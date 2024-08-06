@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_recipe_app_bloc/Blocs/bloc/recipe_online_bloc.dart';
+import 'package:food_recipe_app_bloc/Blocs/bloc/RecipeOnlie/recipe_online_bloc.dart';
+import 'package:food_recipe_app_bloc/Pages/add_recipe_page.dart';
 import 'package:food_recipe_app_bloc/Pages/homePage.dart';
 import 'package:food_recipe_app_bloc/Pages/online_recipe_page.dart';
 
@@ -14,7 +15,7 @@ class BottomNavBar extends StatelessWidget {
       length: 3,
       child: Scaffold(
         bottomNavigationBar: Container(
-          color: Colors.black,
+          color: Color.fromARGB(232, 255, 163, 5),
           height: 70,
           child: const TabBar(
             tabs: [
@@ -27,9 +28,7 @@ class BottomNavBar extends StatelessWidget {
                 text: "Add Recipe",
               ),
               Tab(
-                icon: Icon(
-                  Icons.restaurant_menu,
-                ),
+                icon: Icon(Icons.cloud_download),
                 text: "Fetch Recipes",
               ),
             ],
@@ -38,11 +37,8 @@ class BottomNavBar extends StatelessWidget {
             unselectedLabelColor: Color(0xff999999),
           ),
         ),
-        body: TabBarView(children: [
-          Homepage(),
-          // OnlineRecipePage(),
-          //  OnlineRecipePage()
-        ]),
+        body: TabBarView(
+            children: [RecipeListScreen(), AddRecipes(), OnlineRecipePage()]),
       ),
     );
   }

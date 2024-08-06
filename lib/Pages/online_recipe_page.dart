@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_recipe_app_bloc/Blocs/bloc/recipe_online_bloc.dart';
+import 'package:food_recipe_app_bloc/Blocs/bloc/RecipeOnlie/recipe_online_bloc.dart';
 import 'package:food_recipe_app_bloc/Cards/recipe_card_online.dart';
 
 class OnlineRecipePage extends StatelessWidget {
@@ -19,21 +19,6 @@ class OnlineRecipePage extends StatelessWidget {
               fontFamily: AutofillHints.creditCardExpirationDay,
               fontWeight: FontWeight.w500),
         )),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: InkWell(
-                onTap: () {},
-                child: const Icon(
-                  size: 30,
-                  Icons.send,
-                  color: Color.fromARGB(255, 131, 73, 3),
-                )),
-          ),
-          const SizedBox(
-            width: 13,
-          )
-        ],
       ),
       body: BlocBuilder<RecipeOnlineBloc, RecipeOnlineState>(
         builder: (context, state) {

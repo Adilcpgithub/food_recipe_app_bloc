@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_recipe_app_bloc/Blocs/bloc/recipe_online_bloc.dart';
+import 'package:food_recipe_app_bloc/Blocs/bloc/RecipeOnlie/recipe_online_bloc.dart';
 import 'package:food_recipe_app_bloc/Pages/bottom_navbar.dart';
 import 'package:food_recipe_app_bloc/Repository/recipe_online_repository.dart';
 
