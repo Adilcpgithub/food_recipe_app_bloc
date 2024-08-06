@@ -4,6 +4,7 @@ import 'package:food_recipe_app_bloc/Blocs/bloc/MyRecipeBloc/bloc/my_recipe_bloc
 import 'package:food_recipe_app_bloc/Cards/custome_recipe_card.dart';
 import 'package:food_recipe_app_bloc/Models/custome_recipe_model.dart';
 import 'package:food_recipe_app_bloc/Pages/add_recipe_page.dart';
+import 'package:food_recipe_app_bloc/Repository/custome_recipe_repository.dart';
 
 // class RecipeListScreen extends StatefulWidget {
 //   @override
@@ -94,8 +95,8 @@ class RecipeListScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final data = state.customRecipes[index];
                 return GestureDetector(
-                  onTap: () {
-                    // Handle tap event
+                  onDoubleTap: () {
+                    context.read<CustomRecipeRepository>().deletData(data.id);
                   },
                   child: RecipeCardCustom(
                     title: data.title,
@@ -105,6 +106,10 @@ class RecipeListScreen extends StatelessWidget {
                   ),
                 );
               },
+            );
+          } else if (state is MyRecipeNoData) {
+            return Center(
+              child: Text('NO Datas'),
             );
           } else {
             return const Center(child: Text('Failed to load data'));

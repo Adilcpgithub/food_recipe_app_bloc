@@ -6,7 +6,7 @@ import 'package:food_recipe_app_bloc/Models/recipe_model_online.dart';
 class CustomRecipeRepository {
   Future<List<CustomeRecipeModel>> getCustomData() async {
     print('calling just ');
-    final url = 'https://api.nstack.in/v1/todos?page=1&limit=20';
+    final url = 'https://api.nstack.in/v1/todos?page=1&limit=10';
     // final uri = Uri.parse(url);
     final response =
         await http.get(Uri.parse(url), headers: {"accept": "application/json"});

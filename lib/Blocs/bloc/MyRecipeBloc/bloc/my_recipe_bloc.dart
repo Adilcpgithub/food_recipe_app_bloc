@@ -16,6 +16,9 @@ class MyRecipeBloc extends Bloc<MyRecipeEvent, MyRecipeState> {
           try {
             print('kkkkkkkkkkkkkkkkkkkkkkkkkkk');
             final customRecipes = await customRecipeRepository.getCustomData();
+            if (customRecipes.length == 0) {
+              emit(MyRecipeNoData());
+            }
             emit(MyRecipeLoaded(customRecipes: customRecipes));
           } catch (e) {
             throw Exception();

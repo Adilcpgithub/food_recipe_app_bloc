@@ -10,3 +10,5 @@ class MyRecipeLoaded extends MyRecipeState {
   final List<CustomeRecipeModel> customRecipes;
   MyRecipeLoaded({required this.customRecipes});
 }
+
+class MyRecipeNoData extends MyRecipeState {}
