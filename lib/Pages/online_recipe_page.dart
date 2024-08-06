@@ -10,10 +10,10 @@ class OnlineRecipePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Color.fromARGB(232, 255, 163, 5),
         title: const Center(
             child: Text(
-          '   Tasty Finds',
+          'Tasty Finds',
           style: TextStyle(
               fontSize: 22,
               fontFamily: AutofillHints.creditCardExpirationDay,

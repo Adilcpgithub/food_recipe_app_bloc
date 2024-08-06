@@ -1,10 +1,12 @@
 part of 'my_recipe_bloc.dart';
 
-sealed class MyRecipeState extends Equatable {
-  const MyRecipeState();
-  
-  @override
-  List<Object> get props => [];
-}
+abstract class MyRecipeState {}
 
 final class MyRecipeInitial extends MyRecipeState {}
+
+class MyRecipeLoading extends MyRecipeState {}
+
+class MyRecipeLoaded extends MyRecipeState {
+  final List<CustomeRecipeModel> customRecipes;
+  MyRecipeLoaded({required this.customRecipes});
+}

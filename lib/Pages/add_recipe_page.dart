@@ -51,8 +51,15 @@ class _AddRecipesState extends State<AddRecipes> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        backgroundColor: Colors.grey[200],
-        title: const Text('Submit Recipe'),
+        backgroundColor: Color.fromARGB(232, 255, 163, 5),
+        title: Center(
+            child: const Text(
+          'Submit Recipe',
+          style: TextStyle(
+              fontSize: 22,
+              fontFamily: AutofillHints.creditCardExpirationDay,
+              fontWeight: FontWeight.w500),
+        )),
       ),
       body: Container(
         color: Colors.grey[200], // Background color for the whole body
@@ -147,18 +154,11 @@ class _AddRecipesState extends State<AddRecipes> {
       ),
     );
   }
-
-  String? _validate(String? value, String dataType) {
-    if (value == null || value.isEmpty) {
-      return 'Please enter  $dataType';
-    }
-    return null;
-  }
 }
 
 Future<List<CustomeRecipeModel>> getCustomData() async {
   print('calling just ');
-  final url = 'https://api.nstack.in/v1/todos?page=1&limit=20';
+  final url = 'https://api.nstack.in/v1/todos?page=1&limit=10';
   // final uri = Uri.parse(url);
   final response =
       await http.get(Uri.parse(url), headers: {"accept": "application/json"});
